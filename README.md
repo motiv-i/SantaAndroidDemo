@@ -79,7 +79,7 @@
     ```xml
     <!-- 전면 광고 시 필수 -->
     <activity
-    android:name="kr.motivi.santa.ads.MotiviActivity">
+        android:name="kr.motivi.santa.ads.MotiviActivity">
     </activity>
     ```
 
@@ -109,7 +109,7 @@
     - Android P를 대상으로 하는 앱이 암호화되지 않은 연결을 허용하지 않는 것을 기본으로 합니다.
     - http:// -> https:// 전환을 필요로 합니다.
     - santa sdk는 광고 요청 등의 Api에 https를 사용하지만 애드 서버에 연결된 많은 광고주 플랫폼사들의 광고 소재 리소스(image, js 등)의 원할한 활용을 위해 http 사용 허가 설정이 필요합니다.
-    - 1번 혹은 2번 형태로 적용 가능
+    - 아래 두가지 방식중 하나로 적용 가능
         1. AndroidManifest.xml에 application 속성에
             android:usesCleartextTraffic="true" 직접 설정
             ```xml
@@ -138,6 +138,8 @@
 ## 광고 적용하기
 
 ### 배너 광고
+- [샘플 DemoActivity.java](https://github.com/motiv-i/SantaAndroidDemo/blob/main/app/src/main/java/com/motivi/santa/demo/DemoActivity.java)
+- [샘플 demo_activity.xml](https://github.com/motiv-i/SantaAndroidDemo/blob/main/app/src/main/res/layout/demo_activity.xml)
 
 1. 사이트로부터 발급받은 유닛 아이디를 확인합니다. (대시보드 캡쳐 수정 예정)
     - ![unit id](images/santa_sdk_guide_1.png)
@@ -154,7 +156,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
             </kr.motivi.santa.ads.view.SantaAdView>
-        ```
+            ```
 
     2. Native 배너 설정시
         - 배너 타입 설정(app:ad_format)에서 "native"을 설정합니다. 동적설정은 [5-2. Native 타입만 설정한 경우](#2-Native-타입만-설정하는-경우)가 여기에 해당합니다.
@@ -214,21 +216,21 @@
     ```
     - 하나의 배너 영역에 1개 이상의 타입을 지정할 수 있으며, 여러 타입을 지정한 경우에는 지정한 타입들 중 하나를 랜덤하게 응답 받습니다.
 
-        1. Html 타입만 설정하는 경우
+    1. Html 타입만 설정하는 경우
 
-            - Html 타입의 배너 광고를 요청할 수 있습니다. SantaAdView에 Html 타입의 배너 광고가 노출됩니다.
+        - Html 타입의 배너 광고를 요청할 수 있습니다. SantaAdView에 Html 타입의 배너 광고가 노출됩니다.
 
-                ``santaAdView.setAdFormats(AdFormat.HTML);``
+            ``santaAdView.setAdFormats(AdFormat.HTML);``
 
-        2. Native 타입만 설정하는 경우
-            - Native 타입의 배너 광고를 요청할 수 있습니다. SantaAdView에 Native 타입의 배너 광고가 노출됩니다.
+    2. Native 타입만 설정하는 경우
+        - Native 타입의 배너 광고를 요청할 수 있습니다. SantaAdView에 Native 타입의 배너 광고가 노출됩니다.
 
-                ``santaAdView.setAdFormats(AdFormat.NATIVE);``
+            ``santaAdView.setAdFormats(AdFormat.NATIVE);``
 
-        3. Html 타입과 Native 타입 모두 설정하는 경우
-            - Html과 Native, 2가지 타입의 광고를 요청할 수 있습니다. Html과 Native 둘 중 하나의 광고를 랜덤하게 응답 받고, 응답 받은 타입의 광고가 SantaAdView에 노출됩니다.
+    3. Html 타입과 Native 타입 모두 설정하는 경우
+        - Html과 Native, 2가지 타입의 광고를 요청할 수 있습니다. Html과 Native 둘 중 하나의 광고를 랜덤하게 응답 받고, 응답 받은 타입의 광고가 SantaAdView에 노출됩니다.
 
-                ``santaAdView.setAdFormats(AdFormat.HTML, AdFormat.NATIVE);``
+            ``santaAdView.setAdFormats(AdFormat.HTML, AdFormat.NATIVE);``
 
 6. ``setOnAdListener()`` 메서드를 사용하여 광고 이벤트를 등록합니다.
     ```java
