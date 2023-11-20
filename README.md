@@ -51,7 +51,7 @@
     - 모듈의 앱 수준 build.gradle파일 (일반적으로 app/build.gradle)에 dependencies에 아래 항목을 추가합니다.
       ```gradle
       dependencies {
-          implementation 'kr.motivi.santa:ads:1.0.0'
+          implementation 'kr.motivi.santa:ads:0.9'
       }
       ```
 
