@@ -5,7 +5,6 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import kr.motivi.santa.MediationType;
 import kr.motivi.santa.NoAdCode;
 import kr.motivi.santa.ads.OnAdListener;
 import kr.motivi.santa.ads.view.NativeAsset;
@@ -47,11 +46,6 @@ public class DemoActivity extends AppCompatActivity {
             @Override
             public void onClick() {
                 // 광고 클릭됨
-            }
-
-            @Override
-            public void onMediation(MediationType mediationType) {
-                // 설정된 타 SDK 미디에이션 순서 호출. 클라이언트 설정 없을 시 호출 되지 않음
             }
         });
 
