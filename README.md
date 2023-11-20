@@ -141,7 +141,7 @@
 - [샘플 DemoActivity.java](https://github.com/motiv-i/SantaAndroidDemo/blob/main/app/src/main/java/com/motivi/santa/demo/DemoActivity.java)
 - [샘플 demo_activity.xml](https://github.com/motiv-i/SantaAndroidDemo/blob/main/app/src/main/res/layout/demo_activity.xml)
 
-1. 사이트로부터 발급받은 유닛 아이디를 확인합니다. (대시보드 캡쳐 수정 예정)
+1. 사이트로부터 발급받은 유닛 아이디를 확인합니다.
     - ![unit id](images/santa_sdk_guide_1.png)
 
 2.  배너 광고를 게재하려면 광고를 노출시킬 activity 혹은 fragment 레이아웃(XML 파일)에 SantaAdView를 적용합니다.
@@ -243,15 +243,12 @@
         public void onShow() {}
         @Override
         public void onClick() {}
-        @Override
-        public void onMediation(MediationType mediationType) {}
     });
     ```
     - ``onLoad()`` : 광고가 로딩된 시점에 호출 됩니다.
     - ``onShow()`` : 광고가 사용자에게 노출된 시점에 호출 됩니다.
     - ``onNoAd(NoAdCode)`` : 서버로부터 광고를 가져오지 못한 경우에 호출 됩니다.
     - ``onClick()`` : 광고 클릭 시 호출 됩니다.
-    - ``onMediation(MediationType)`` : 타 SDK를 이용한 미디에이션 설정시 호출된다. (사용 안할시 호출 되지 않음)
 
 7. Native 타입의 경우, 추가적인 설정이 필요합니다.
     1.	``setNativeViewBinder()`` 메서드를 사용하여, Native 광고가 노출될 영역을 설정한다.<br>NativeViewBinder는 2-2. Native 배너 설정시에서 xml에 선언한 id를 아래 각 함수를 통해 NativeViewBinder에 바인딩 합니다.
