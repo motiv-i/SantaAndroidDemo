@@ -41,8 +41,6 @@
         android:layout_height="wrap_content"
         app:unit_id="@string/unit_id"
         app:ad_format="native"
-        app:test_mode="1"
-        app:rewared="1"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent" >
 
@@ -71,7 +69,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="15dp"
                     android:layout_weight="1"
-                    android:textColor="@android:color/darker_gray"
+                    android:textColor="@android:color/black"
                     android:textStyle="bold"/>
 
                 <ImageView
@@ -88,7 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:textColor="@android:color/darker_gray"/>
+                android:textColor="@android:color/black"/>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -96,8 +94,9 @@
                 <ImageView
                     android:id="@+id/native_main_image"
                     android:layout_width="match_parent"
-                    android:layout_height="250dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:scaleType="fitCenter"
                     android:contentDescription="native_main_image" />
 
             </RelativeLayout>
@@ -110,7 +109,7 @@
                 android:layout_marginTop="10dp"
                 android:clickable="true"
                 android:text="learn_more"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:textSize="12sp"
                 android:textStyle="bold"/>
 
