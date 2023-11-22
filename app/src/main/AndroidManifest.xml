@@ -20,7 +20,10 @@
 
 
         <activity
-            android:name="com.motivi.santa.demo.DemoActivity"
+            android:name=".DemoActivity"
+            android:exported="true">
+        </activity>
+        <activity android:name=".DemoActivityKt"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
