@@ -34,15 +34,18 @@ public class DemoActivity extends AppCompatActivity {
                 // 광고 로딩
                 santaAdView.setVisibility(View.VISIBLE);
             }
+
             @Override
             public void onNoAd(NoAdCode noAdCode) {
                 // 광고 없음
                 santaAdView.setVisibility(View.GONE);
             }
+
             @Override
             public void onShow() {
                 // 광고 노출됨
             }
+
             @Override
             public void onClick() {
                 // 광고 클릭됨
@@ -73,7 +76,7 @@ public class DemoActivity extends AppCompatActivity {
 
     @Override
     public void onDestroy() {
-        if(santaAdView != null){
+        if (santaAdView != null) {
             santaAdView.onDestroy();
         }
         super.onDestroy();

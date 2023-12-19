@@ -18,16 +18,16 @@
     - [추가 설정 메소드](#추가-설정-메소드)
 
 ## Version History
+- Version 1.1.0
+    - 이미지 다운로드 오류 케이스 수정 대응    
 - Version 1.0.0
 
 ## 시작하기 전에
 - Santa SDK에서는 광고 요청에 대한 응답 후 노출까지의 시간(노출 캐시 시간)을 10분 이내로 권장합니다 (IAB 권장). 광고 응답 이후 노출 시간 차이가 해당 시간보다 길어지면 광고 캠페인에 따라서 노출이 무효 처리될 수 있습니다.
 
 ### SDK 정보
-- v1.0.0 기준
 - 참조 1: [Google Play 앱의 대상 API 수준 요구사항](https://support.google.com/googleplay/android-developer/answer/11926878?hl=ko)
 - 참조 2: [Google Play의 대상 API 수준 요구사항 충족하기](https://developer.android.com/google/play/requirements/target-sdk?hl=ko)
-- SANTA SDK v1.0.0 버전
   ```gradle
   minSdkVersion 23
   targetSdkVersion 33
@@ -51,7 +51,7 @@
     - 모듈의 앱 수준 build.gradle파일 (일반적으로 app/build.gradle)에 dependencies에 아래 항목을 추가합니다.
       ```gradle
       dependencies {
-          implementation 'kr.motivi.santa:ads:1.0.0'
+          implementation 'kr.motivi.santa:ads:1.1.0'
       }
       ```
 
