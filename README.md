@@ -18,7 +18,7 @@
     - [추가 설정 메소드](#추가-설정-메소드)
 
 ## Version History
-- Version 1.2.0
+- Version 1.2.1
     - 광고 객체 해제 관련 업데이트
 - Version 1.1.0
     - 화면 종료시, 이미지 다운로드 오류 케이스 수정 대응    
@@ -53,7 +53,7 @@
     - 모듈의 앱 수준 build.gradle파일 (일반적으로 app/build.gradle)에 dependencies에 아래 항목을 추가합니다.
       ```gradle
       dependencies {
-          implementation 'kr.motivi.santa:ads:1.2.0'
+          implementation 'kr.motivi.santa:ads:1.2.1'
       }
       ```
 
