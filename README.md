@@ -20,7 +20,6 @@
 ## Version History
 - Version 1.2.1
     - 로그 업데이트
-- Version 1.2.0
     - 광고 객체 해제 관련 업데이트
 - Version 1.1.0
     - 화면 종료시, 이미지 다운로드 오류 케이스 수정 대응    
